@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+    <title>Saschahi's Public Project-T Shop Addon Pricelist</title>
+    <script type="text/javascript">
+        const itemListURL = "https://raw.githubusercontent.com/saschahi/TerrariaList/RussianList/ItemList.json";
+        const NPCListURL = "https://raw.githubusercontent.com/saschahi/TerrariaList/RussianList/NPCList.json";
+		const BuffListURL = "https://raw.githubusercontent.com/saschahi/TerrariaList/RussianList/BuffList.json";
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Saschahi</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.twitch.tv/Saschahi">My Stream</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main role="main">
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-3">Project-T Shop Addon</h1>
+                <p>Project-T Shop Addon is an Addon to Project-T made by Saschahi to give viewers the ability to Buy NPCs and Items in Streamers Playthroughs.</p>
+                <ul class="list-group">
+                    <li class="list-group-item">!bal - check yourbalance </li>
+                    <li class="list-group-item">!buy - Syntax: !buy zombie 6 - buy an NPC or Item</li>
+                    <li class="list-group-item">!purchaselist - Brings you here</li>
+					<li class="list-group-item">BEWARE! Some NPCs can only be spawned under certain conditions!</li>
+					<li class="list-group-item">If it confirms your Purchase but the monster didn't appear, the conditions haven't been met!</li>
+                </ul>
+            </div>
+        </div>
+        <div ng-app='tabs' ng-controller='tabCtrl'>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class='tabs'>
+                            <form>
+                                <div class="form-group">
+                                    <button class="btn btn-success" ng-class="{'active': (selected == '1')}" ng-click='selected=1'>
+                                        Items
+                                    </button>
+                                    <button class="btn btn-success" ng-class="{'active': (selected == '2')}" ng-click='selected=2'>
+                                        NPCs
+                                    </button>
+									<button class="btn btn-success" ng-class="{'active': (selected == '3')}" ng-click='selected=3'>
+                                        Buffs
+                                    </button>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label" for="">Price Between:</label>
+                                    <div class="col-sm-2">
+                                        <input type="number" class="form-control" id="item-price-min" placeholder="0">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input type="number" class="form-control" id="item-price-max" placeholder="9999999">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" ng-show='selected == 1'>
+                    <div class="col-md-12">
+                        <div id="Items">
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-sm">Search</span>
+                                </div>
+                                <input type="text" class="form-control search" aria-label="Search" aria-describedby="inputGroup-sizing-sm">
+                            </div>
+                            <p>
+                                <button type="button" class="btn btn-primary sort" data-sort="Name">
+                                    Sort by Name
+                                </button>
+                                <button type="button" class="btn btn-primary sort" data-sort="Price">
+                                    Sort by Price
+                                </button>
+								<button type="button" class="btn btn-primary sort" data-sort="Mod">
+                                    Sort by Mod
+                                </button>
+                            </p>
+                            <table class="table Items">
+                                <tr>
+                                    <th scope="col" class="sort" data-sort="Name">Name</th>
+                                    <th scope="col" class="sort" data-sort="Price">Price</th>
+									<th scope="col" class="sort" data-sort="Mod">Mod</th>
+                                </tr>
+                                <tbody class="list">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" ng-show='selected == 2'>
+                    <div class="col-md-12">
+                        <div id="NPCs">
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-sm">Search</span>
+                                </div>
+                                <input type="text" class="form-control search" aria-label="Search" aria-describedby="inputGroup-sizing-sm">
+                            </div>
+                            <p>
+                                <button type="button" class="btn btn-primary sort" data-sort="Name">
+                                    Sort by Name
+                                </button>
+                                <button type="button" class="btn btn-primary sort" data-sort="Price">
+                                    Sort by Price
+                                </button>
+								<button type="button" class="btn btn-primary sort" data-sort="Mod">
+                                    Sort by Mod
+                                </button>
+                            </p>
+                            <table class="table NPCs">
+                                <tr>
+                                    <th scope="col" class="sort" data-sort="Name">Name</th>
+                                    <th scope="col" class="sort" data-sort="Price">Price</th>
+									<th scope="col" class="sort" data-sort="Mod">Mod</th>
+
+                                </tr>
+                                <tbody class="list">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+				<div class="row" ng-show='selected == 3'>
+                    <div class="col-md-12">
+                        <div id="Buffs">
+                            <div class="input-group input-group-sm mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-sm">Search</span>
+                                </div>
+                                <input type="text" class="form-control search" aria-label="Search" aria-describedby="inputGroup-sizing-sm">
+                            </div>
+                            <p>
+                                <button type="button" class="btn btn-primary sort" data-sort="Name">
+                                    Sort by Name
+                                </button>
+                                <button type="button" class="btn btn-primary sort" data-sort="Price">
+                                    Sort by Price per Second
+                                </button>
+								<button type="button" class="btn btn-primary sort" data-sort="Mod">
+                                    Sort by Mod
+                                </button>
+                            </p>
+                            <table class="table Buffs">
+                                <tr>
+                                    <th scope="col" class="sort" data-sort="Name">Name</th>
+                                    <th scope="col" class="sort" data-sort="Price">Price</th>
+									<th scope="col" class="sort" data-sort="Mod">Mod</th>
+
+                                </tr>
+                                <tbody class="list">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <!-- Example row of columns -->
+            <div class="row">
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6">
+                </div>
+				<div class="col-md-6">
+                </div>
+            </div>
+            <hr>
+        </div>
+    </main>
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
+            <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <style>
+        .sort:after {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            content: "";
+            position: relative;
+            top: -10px;
+            right: -5px;
+        }
+        
+        .sort.asc:after {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid #fff;
+            content: "";
+            position: relative;
+            top: 4px;
+            right: -5px;
+        }
+        
+        .sort.desc:after {
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid #fff;
+            content: "";
+            position: relative;
+            top: -4px;
+            right: -5px;
+        }
+    </style>
+    <script type="text/javascript">
+        let itemList = null;
+        $.getJSON(itemListURL, function(data) 
+		{
+            var options = 
+			{
+                valueNames: ['Name', 'Price', 'Mod'],
+                item: '<tr><td class="Name" scope="row"></td><td class="Price"></td><td class="Mod"></td></tr>'
+            };
+
+            var itemData = [];
+            $.each(data.List, function(index, value) 
+			{
+                if (value["Price"] > 0) 
+				{
+                    itemData.push(value);
+                }
+            });
+
+            itemList = new List('Items', options, itemData);
+        });
+
+        let NPCList = null;
+        $.getJSON(NPCListURL, function(data) 
+		{
+            var options = 
+			{
+                valueNames: ['Name', 'Price', 'Mod'],
+                item: '<tr><td class="Name" scope="row"></td><td class="Price"></td><td class="Mod"></td></tr>'
+            };
+
+            var NPCData = [];
+            $.each(data.List, function(index, value) 
+			{
+                if (value["Price"] > 0) 
+				{
+                    NPCData.push(value);
+                }
+            });
+
+            NPCList = new List('NPCs', options, NPCData);
+        });
+		
+		let BuffList = null;
+        $.getJSON(BuffListURL, function(data) 
+		{
+            var options = 
+			{
+                valueNames: ['Name', 'Price', 'Mod'],
+                item: '<tr><td class="Name" scope="row"></td><td class="Price"></td><td class="Mod"></td></tr>'
+            };
+
+            var buffData = [];
+            $.each(data.List, function(index, value) 
+			{
+                if (value["Price"] > 0) 
+				{
+                    buffData.push(value);
+                }
+            });
+
+            BuffList = new List('Buffs', options, buffData);
+        });
+
+        $("#item-price-min").keyup(function() 
+		{
+            updateItemFilter();
+        });
+
+        $("#item-price-max").keyup(function() 
+		{
+            updateItemFilter();
+        });
+
+        function updateItemFilter() 
+		{
+            var minPrice = $("#item-price-min").val();
+            var maxPrice = $("#item-price-max").val();
+            itemList.filter(function(item) 
+			{
+                var allow = true;
+                if (minPrice != "" && parseInt(item.values().price) < minPrice) 
+				{
+                    allow = false;
+                }
+                if (maxPrice != "" && parseInt(item.values().price) > maxPrice) 
+				{
+                    allow = false;
+                }
+                return allow;
+            });
+			
+	        NPCList.filter(function(item) 
+			{
+                var allow = true;
+                if (minPrice != "" && parseInt(item.values().price) < minPrice) 
+				{
+                    allow = false;
+                }
+                if (maxPrice != "" && parseInt(item.values().price) > maxPrice) 
+				{
+                    allow = false;
+                }
+                return allow;
+            });
+			
+            BuffList.filter(function(item) 
+			{
+                var allow = true;
+                if (minPrice != "" && parseInt(item.values().price) < minPrice) 
+				{
+                    allow = false;
+                }
+                if (maxPrice != "" && parseInt(item.values().price) > maxPrice) 
+				{
+                    allow = false;
+                }
+                return allow;			
+            });
+        }
+    </script>
+    <script type="text/javascript">
+        var tabs = angular.module('tabs', [])
+            .controller('tabCtrl', function($scope) {
+                $scope.selected = "1";
+            });
+    </script>
+</body>
+
+</html>

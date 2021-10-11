@@ -1,0 +1,556 @@
+{
+  "List": [
+    {
+      "Name": "obsidianskin",
+      "Price": 5.0,
+      "ID": 1,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "regeneration",
+      "Price": 4.0,
+      "ID": 2,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "swiftness",
+      "Price": 4.0,
+      "ID": 3,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "gills",
+      "Price": 4.0,
+      "ID": 4,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "ironskin",
+      "Price": 1.0,
+      "ID": 5,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "manaregeneration",
+      "Price": 2.0,
+      "ID": 6,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "magicpower",
+      "Price": 3.0,
+      "ID": 7,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "featherfall",
+      "Price": 2.0,
+      "ID": 8,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "spelunker",
+      "Price": 2.0,
+      "ID": 9,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "invisibility",
+      "Price": 5.0,
+      "ID": 10,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "shine",
+      "Price": 3.0,
+      "ID": 11,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "nightowl",
+      "Price": 2.0,
+      "ID": 12,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "battle",
+      "Price": 7.0,
+      "ID": 13,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "thorns",
+      "Price": 1.0,
+      "ID": 14,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "waterwalking",
+      "Price": 3.0,
+      "ID": 15,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "archery",
+      "Price": 3.0,
+      "ID": 16,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "hunter",
+      "Price": 3.0,
+      "ID": 17,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "gravitation",
+      "Price": 12.0,
+      "ID": 18,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "poisoned",
+      "Price": 12.0,
+      "ID": 20,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "potionsickness",
+      "Price": 15.0,
+      "ID": 21,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "darkness",
+      "Price": 15.0,
+      "ID": 22,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "cursed",
+      "Price": 40.0,
+      "ID": 23,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "onfire",
+      "Price": 25.0,
+      "ID": 24,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "tipsy",
+      "Price": 10.0,
+      "ID": 25,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "wellfed",
+      "Price": 1.0,
+      "ID": 26,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "Clairvoyance",
+      "Price": 1.0,
+      "ID": 29,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "bleeding",
+      "Price": 8.0,
+      "ID": 30,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "confused",
+      "Price": 50.0,
+      "ID": 31,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "slow",
+      "Price": 15.0,
+      "ID": 32,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "weak",
+      "Price": 10.0,
+      "ID": 33,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "silenced",
+      "Price": 35.0,
+      "ID": 35,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "brokenarmor",
+      "Price": 25.0,
+      "ID": 36,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "cursedinferno",
+      "Price": 36.0,
+      "ID": 39,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "frostburn",
+      "Price": 38.0,
+      "ID": 44,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "chilled",
+      "Price": 15.0,
+      "ID": 46,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "Frozen",
+      "Price": 100.0,
+      "ID": 47,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "honey",
+      "Price": 2.0,
+      "ID": 48,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "panic",
+      "Price": 10.0,
+      "ID": 63,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "burning",
+      "Price": 500.0,
+      "ID": 67,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "suffocation",
+      "Price": 200.0,
+      "ID": 68,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "ichor",
+      "Price": 15.0,
+      "ID": 69,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "venom",
+      "Price": 38.0,
+      "ID": 1,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "weaponimbuevenom",
+      "Price": 2.0,
+      "ID": 71,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "weaponimbuecursedflame",
+      "Price": 2.0,
+      "ID": 73,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "weaponimbuefire",
+      "Price": 1.0,
+      "ID": 74,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "weaponimbuegold",
+      "Price": 1.0,
+      "ID": 75,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "weaponimbueichor",
+      "Price": 3.0,
+      "ID": 76,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "weaponimbuenanites",
+      "Price": 4.0,
+      "ID": 77,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "weaponimbueconfetti",
+      "Price": 1.0,
+      "ID": 78,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "weaponimbuepoison",
+      "Price": 1.0,
+      "ID": 79,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "blackout",
+      "Price": 50.0,
+      "ID": 80,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "chaosstate",
+      "Price": 20.0,
+      "ID": 88,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "ammobox",
+      "Price": 1.0,
+      "ID": 93,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "manasickness",
+      "Price": 4.0,
+      "ID": 94,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "wet",
+      "Price": 1.0,
+      "ID": 103,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "miningbuff",
+      "Price": 2.0,
+      "ID": 104,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "heartreach",
+      "Price": 1.0,
+      "ID": 105,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "calm",
+      "Price": 2.0,
+      "ID": 106,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "titan",
+      "Price": 2.0,
+      "ID": 108,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "flipper",
+      "Price": 4.0,
+      "ID": 109,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "summoningbuff",
+      "Price": 2.0,
+      "ID": 110,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "dangersense",
+      "Price": 4.0,
+      "ID": 111,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "ammoreservation",
+      "Price": 2.0,
+      "ID": 112,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "lifeforce",
+      "Price": 1.0,
+      "ID": 113,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "endurance",
+      "Price": 2.0,
+      "ID": 114,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "rage",
+      "Price": 5.0,
+      "ID": 115,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "inferno",
+      "Price": 6.0,
+      "ID": 116,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "wrath",
+      "Price": 5.0,
+      "ID": 117,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "lovestruck",
+      "Price": 1.0,
+      "ID": 119,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "stinky",
+      "Price": 1.0,
+      "ID": 120,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "fishingbuff",
+      "Price": 1.0,
+      "ID": 121,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "sonar",
+      "Price": 2.0,
+      "ID": 122,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "crate",
+      "Price": 1.0,
+      "ID": 123,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "warmth",
+      "Price": 1.0,
+      "ID": 124,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "electrified",
+      "Price": 50.0,
+      "ID": 144,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "moonbite",
+      "Price": 15.0,
+      "ID": 145,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "webbed",
+      "Price": 90.0,
+      "ID": 149,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "bewitched",
+      "Price": 1.0,
+      "ID": 150,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "stoned",
+      "Price": 100.0,
+      "ID": 156,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "sharpened",
+      "Price": 1.0,
+      "ID": 159,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "dazed",
+      "Price": 15.0,
+      "ID": 160,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "obstructed",
+      "Price": 80.0,
+      "ID": 163,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "distorted",
+      "Price": 30.0,
+      "ID": 164,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "dryadsblessing",
+      "Price": 1.0,
+      "ID": 165,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "penetrated",
+      "Price": 18.0,
+      "ID": 169,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "dryadsbane",
+      "Price": 50.0,
+      "ID": 186,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "witheredarmor",
+      "Price": 25.0,
+      "ID": 195,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "witheredweapon",
+      "Price": 40.0,
+      "ID": 196,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "oozed",
+      "Price": 20.0,
+      "ID": 197,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "strikingmoment",
+      "Price": 3.0,
+      "ID": 198,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "creativeshock",
+      "Price": 20.0,
+      "ID": 199,
+      "Mod": "Manual"
+    },
+    {
+      "Name": "rapidhealing",
+      "Price": 10.0,
+      "ID": 58,
+      "Mod": "Manual"
+    }
+  ]
+}
